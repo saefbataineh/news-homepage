@@ -1,0 +1,306 @@
+// # Front-end Style Guide
+// ## Layout
+// The designs were created to the following widths:
+// - Mobile: 375px
+// - Desktop: 1440px
+// ## Colors
+// ### Primary
+// - Soft orange: hsl(35, 77%, 62%)
+// - Soft red: hsl(5, 85%, 63%)
+// ### Neutral
+// Off-white: 
+// Grayish blue: hsl(233, 8%, 79%)
+// Dark grayish blue: hsl(236, 13%, 42%)
+// Very dark blue: hsl(240, 100%, 5%)
+// ## Typography
+// ### Body Copy
+// - Font size (paragraph): 15px
+// ### Font
+// - Family: [Inter](https://fonts.google.com/specimen/Inter)
+// - Weights: 400, 700, 800
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+html {
+    height: 100vh;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.Grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .burger-menu {
+        display: none !important;
+    }
+    .Header {
+        width: 100%;
+        padding: 20px 0px;
+        grid-column: 2/11;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .Menu {
+            width: 50%;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            li {
+                a {
+                    text-decoration: none;
+                    color: hsl(236, 13%, 42%);
+                    font-weight: 500;
+                }
+                font-weight: 700;
+                font-size: 15px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: hsl(240, 100%, 5%);
+                }
+            }
+        }
+    }
+    .NewsPaper {
+        height: 100%;
+        grid-row: 2/5;
+        hr {
+            color: #fff;
+            background-color: #fff;
+            width: 100%;
+        }
+        h1 {
+            color: hsl(35, 77%, 62%);
+            margin-bottom: 15px;
+        }
+        p {
+            font-weight: 200;
+        }
+        grid-column: 8/11;
+        // grid-row: 1/4;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 0 15px;
+        margin: 0 0px 0px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .MainImage {
+        grid-column: 2/8;
+        img {
+            width: 100%;
+            // height: 100%;
+            object-fit: cover;
+        }
+    }
+    h1 {
+        font-weight: 900;
+        font-size: 35px;
+        grid-column: 2/4;
+    }
+    p {
+        grid-column: 5/8;
+    }
+    .ReadMore {
+        grid-column: 5/7;
+        background-color: hsl(0, 0%, 98%);
+        border: 1px solid hsl(5, 85%, 63%);
+        color: hsl(240, 100%, 5%);
+        padding: 0;
+        // border-radius: 5px;
+        font-weight: 700;
+        font-size: 15px;
+        width: 100%;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: hsl(5, 85%, 63%);
+            color: hsl(0, 0%, 98%);
+        }
+    }
+    .Adv {
+        padding-top: 50px;
+        grid-column: 2/12;
+        display: flex;
+        img {
+            width: 25%;
+            height: 70%;
+            // padding: 15px;
+            object-fit: cover;
+        }
+        .Adv-content {
+            grid-column: 1/1;
+            display: flex;
+            align-items: center;
+        }
+        .Adv-content2 {
+            grid-column: 2/3;
+            display: flex;
+            align-items: center;
+        }
+        .Adv-content3 {
+            grid-column: 3/5;
+            display: flex;
+            align-items: center;
+        }
+        .content {
+            h2 {
+                color: hsl(233, 8%, 79%);
+            }
+            p {
+                font-weight: 200;
+            }
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 70%;
+        }
+    }
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+    }
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #333;
+        margin: 6px 0;
+    }
+    .side-menu {
+        position: fixed;
+        top: 0;
+        left: -500px;
+        /* Start the menu off-screen */
+        width: 250px;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+    }
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .side-menu li {
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .side-menu li:hover {
+        background-color: #ddd;
+    }
+}
+
+@media (max-width: 768px) {
+    .Grid {
+        .Menu {
+            display: none;
+        }
+        .burger-menu {
+            display: block !important;
+        }
+        grid-template-columns: repeat(12,
+        1fr);
+        .MainImage {
+            grid-column: 2/12;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .NewsPaper {
+            grid-column: 2/12;
+            grid-row: 5/5;
+            margin: 20px 0;
+            padding: 15px 15px;
+            h1 {
+                font-size: 25px;
+            }
+        }
+        h1 {
+            font-size: 25px;
+            grid-column: 2/8;
+        }
+        p {
+            grid-column: 2/12;
+        }
+        .ReadMore {
+            grid-column: 2/7;
+            margin-top: 15px;
+            padding: 15px;
+        }
+        .Adv {
+            grid-column: 2/12;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .Adv-content {
+                grid-column: 1/1;
+                display: flex;
+                align-items: center;
+            }
+            .Adv-content2 {
+                grid-column: 1/1;
+                display: flex;
+                align-items: center;
+            }
+            .Adv-content3 {
+                grid-column: 1/1;
+                display: flex;
+                align-items: center;
+            }
+            .content {
+                h2 {
+                    color: hsl(233, 8%, 79%);
+                }
+                p {
+                    font-weight: 200;
+                }
+                padding: 0 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 70%;
+            }
+        }
+    }
+}

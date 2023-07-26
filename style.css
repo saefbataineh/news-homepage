@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.Grid {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.Grid .burger-menu {
+  display: none !important;
+}
+
+.Grid .Header {
+  width: 100%;
+  padding: 20px 0px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 9;
+  grid-column: 2/11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Grid .Header .Menu {
+  width: 50%;
+}
+
+.Grid .Header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.Grid .Header ul li {
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.Grid .Header ul li a {
+  text-decoration: none;
+  color: #5d5f79;
+  font-weight: 500;
+}
+
+.Grid .Header ul li:hover {
+  color: #00001a;
+}
+
+.Grid .NewsPaper {
+  height: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/5;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-column: 8/11;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 0 15px;
+  margin: 0 0px 0px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Grid .NewsPaper hr {
+  color: #fff;
+  background-color: #fff;
+  width: 100%;
+}
+
+.Grid .NewsPaper h1 {
+  color: #e9ab53;
+  margin-bottom: 15px;
+}
+
+.Grid .NewsPaper p {
+  font-weight: 200;
+}
+
+.Grid .MainImage {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2/8;
+}
+
+.Grid .MainImage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Grid h1 {
+  font-weight: 900;
+  font-size: 35px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+.Grid p {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-column: 5/8;
+}
+
+.Grid .ReadMore {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5/7;
+  background-color: #fafafa;
+  border: 1px solid #f15e50;
+  color: #00001a;
+  padding: 0;
+  font-weight: 700;
+  font-size: 15px;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.Grid .ReadMore:hover {
+  background-color: #f15e50;
+  color: #fafafa;
+}
+
+.Grid .Adv {
+  padding-top: 50px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Grid .Adv img {
+  width: 25%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Grid .Adv .Adv-content {
+  -ms-grid-column: 1;
+  grid-column: 1/1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Grid .Adv .Adv-content2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Grid .Adv .Adv-content3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Grid .Adv .content {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70%;
+}
+
+.Grid .Adv .content h2 {
+  color: #c5c6ce;
+}
+
+.Grid .Adv .content p {
+  font-weight: 200;
+}
+
+.Grid .burger-menu {
+  display: block;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.Grid .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.Grid .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+.Grid .side-menu {
+  position: fixed;
+  top: 0;
+  left: -500px;
+  /* Start the menu off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  -webkit-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+
+.Grid .side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Grid .side-menu li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.Grid .side-menu li:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .Grid {
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  .Grid .Menu {
+    display: none;
+  }
+  .Grid .burger-menu {
+    display: block !important;
+  }
+  .Grid .MainImage {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+  .Grid .MainImage img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .Grid .NewsPaper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    -ms-grid-row: 5;
+    grid-row: 5/5;
+    margin: 20px 0;
+    padding: 15px 15px;
+  }
+  .Grid .NewsPaper h1 {
+    font-size: 25px;
+  }
+  .Grid h1 {
+    font-size: 25px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
+  }
+  .Grid p {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+  }
+  .Grid .ReadMore {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-column: 2/7;
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .Grid .Adv {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2/12;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Grid .Adv .Adv-content {
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Grid .Adv .Adv-content2 {
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Grid .Adv .Adv-content3 {
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Grid .Adv .content {
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 70%;
+  }
+  .Grid .Adv .content h2 {
+    color: #c5c6ce;
+  }
+  .Grid .Adv .content p {
+    font-weight: 200;
+  }
+}
+/*# sourceMappingURL=style.css.map */
